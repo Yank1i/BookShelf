@@ -1,0 +1,49 @@
+<div class="container">
+   
+   
+
+        <table datatable class="table table-bordered table-hover table-striped" [dtTrigger]="dtTrigger">
+            <thead>
+                <tr>
+                    <th scope="col" scope="col" class="align-text-top">Id</th>
+                    <th scope="col" scope="col" class="align-text-top">Name</th>
+                    <th scope="col" scope="col" class="align-text-top">Surname</th>
+                    <th scope="col" scope="col" class="align-text-top">Genre</th>
+                    <th scope="col" scope="col" class="align-text-top">Born Date</th>
+                    <th scope="col" scope="col" class="align-text-top">Death Date</th>
+                    <th scope="col" scope="col" class="align-text-top">Actions</th>
+                </tr>
+            </thead>
+
+
+
+            <tbody>
+                <tr *ngFor="let a of list">
+                    <td scope="col">{{a.id}}</td>
+                    <td scope="col" class="overflowTxt">{{a.name}}</td>
+                    <td scope="col" class="overflowTxt">{{a.surname}}</td>
+                    <td scope="col" class="overflowTxt">{{a.genre}}</td>
+                    <td scope="col">{{a.born_date | date:"dd/mm/yyyy"}}</td>
+                    <td scope="col">{{a.death_date | date:"dd/mm/yyyy"}}</td>
+
+                    <td>
+                        <button class="btn" (click)="detailAuthor(a.id)">
+                            <mat-icon>visibility</mat-icon>
+
+
+                        </button>
+
+                        <button class="btn" (click)="updateAuthor(a.id)">
+                            <mat-icon> border_color</mat-icon>
+                        </button>
+                        <button class="btn" (click)="deleteAuthor(a.id)">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>        
+   
+
+</div>

@@ -1,0 +1,46 @@
+<div class="container" style="width: 75%;">
+
+<form [formGroup]="fg">
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name"  formControlName="name" class="form-control" placeholder="Insert name...">
+    </div>
+
+
+    <div class="mb-3">
+        <label for="surname" class="form-label">Surname</label>
+        <input type="text" id="surname" formControlName="surname" class="form-control" placeholder="Insert surname...">
+    </div>
+
+    <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" id="country" formControlName="country" class="form-control" placeholder="Insert country...">
+    </div>
+
+    <div class="mb-3">
+        <label for="genre" class="form-label">Genre</label>
+        <input type="text" id="genre" formControlName="genre" class="form-control" placeholder="Insert genre...">
+    </div>
+
+    <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <input type="text" id="desc" formControlName="description" class="form-control" placeholder="Insert description...">
+    </div>
+
+    <div class="mb-3">
+        <label for="bdate" class="form-label">Born Date</label>
+        <input type="date" id="bdate" formControlName="born_date" class="form-control" placeholder="Insert a date">
+    </div>
+
+    <div class="mb-3">
+        <label for="dDate" class="form-label">Death Date</label>
+        <input type="date" id="dDate" formControlName="death_date" class="form-control" placeholder="Insert a date">
+    </div>
+
+<button class="btn btn-success" (click)="createAuthor()">Add</button>
+
+
+</form>
+
+</div>
